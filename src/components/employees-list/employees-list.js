@@ -6,8 +6,9 @@ const EmployeesList = ({data}) => {
 
 
     const elements = data.map(item=>{
+        const {id, ...itemprops} = item;
         return (
-            <EmployeesListItem  {...item}/>
+            <EmployeesListItem key={id}  {...itemprops}/>
             // name={item.name} salary={item.salary}
         )
     })
